@@ -1,0 +1,9 @@
+[submodule "BlyssController-raspberry"]
+	path = BlyssController-raspberry
+	url = https://github.com/pyrou/BlyssController-raspberry.git
+[submodule "X10RF-raspberry"]
+	path = X10RF-raspberry
+	url = https://github.com/pyrou/X10RF-raspberry.git
+[submodule "rcswitch-pi"]
+	path = rcswitch-pi
+	url = https://github.com/r10r/rcswitch-pi.git
