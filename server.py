@@ -21,7 +21,6 @@ def x10rf(device,unit,status):
 def rcswitch(device,unit,status):
 	call(["sudo", "./rcswitch-pi/send", str(device), str(unit), ("1" if status == 'on' else "0")])
 	return json.dumps({'data':"ok"})
-	redirect('/')
 
 @error(404)
 def error404(error):
