@@ -14,7 +14,7 @@ GET /x10/{device}/{unit}/{status}.json
 ```
 
 | Param name | Description | Example |
-| - 
+| --- | :--- | --- |
 | `device` | Called also "House code" on some devices, the de device must be a letter between `A` and `P` (case insensitive) | `C` |
 | `unit` | This is the "Unit number" and must be a number between `1` and `16` | `3` |
 | `status` | `on` or `off` | `on` |
@@ -37,7 +37,7 @@ GET /switch/{device}/{unit}/{status}.json
 ```
 
 | Param name | Description | Example |
-| - 
+| --- | :--- | --- |
 | `device` | 5-Bits length mask* of the switch group. |  `10010` |
 | `unit` | This is the "Unit number" and must be a number between `1` and `5` | `2` |
 | `status` | `on` or `off` | `on` |
@@ -61,7 +61,7 @@ GET /blyss/{key}/{channel}/{status}.json
 ```
 
 | Param name | Description | Example |
-| - 
+| --- | :--- | --- |
 | `key` | This is your RF key in hex format. | `0FAE24` |
 | `channel` | This is the channel number to control. It must be a number between `1` and `5` | `1` |
 | `status` | `on` or `off` | `on` |
