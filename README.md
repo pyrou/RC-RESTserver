@@ -5,7 +5,7 @@ RC-RESTserver is a small REST Server written in python. It is designed for Contr
 
 ## Installation 
 
-```
+```bash
 git clone https://github.com/pyrou/RC-RESTserver.git
 chmod ugo+x $(pwd)/RC-RESTserver/rcserver.py
 ln -s /etc/init.d/rcserver $(pwd)/RC-RESTserver/rcserver.py
@@ -61,6 +61,30 @@ To turn off the power outlet socket configured as group 01001, unit B ; perform 
 
 ```
 GET /switch/01001/2/off.json 
+```
+
+
+```
+GET /x10/C/3/on.json 
+```
+
+
+#### Tri-states commands
+
+This endpoint will also use the [rcswitch-pi library](https://github.com/r10r/rcswitch-pi) by sending "tri-states" raw commands.
+
+```
+GET /tristate/{command}.json
+```
+
+| Param name | Description | Example |
+| --- | :--- | --- |
+| `command` | Command identifier defined by F, 0 or 1. |  `F0FF011F0011` |
+
+**Example**
+
+```
+GET /tristate/F0FF011F0011.json 
 ```
 
 ### Blyss devices
