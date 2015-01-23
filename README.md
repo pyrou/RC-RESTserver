@@ -3,6 +3,15 @@ RC-RESTserver
 
 RC-RESTserver is a small REST Server written in python. It is designed for Control RF Remote-controlled devices (power sockets / lamp / ..) using several protocols (Chacon / Otio / Blyss / X10)
 
+## Installation 
+
+```
+git clone https://github.com/pyrou/RC-RESTserver.git
+chmod ugo+x $(pwd)/RC-RESTserver/rcserver.py
+ln -s /etc/init.d/rcserver $(pwd)/RC-RESTserver/rcserver.py
+/etc/init.d/rcserver start
+```
+
 ## API
 
 Once the server is running you can perform HTTP requests to control your devices.
