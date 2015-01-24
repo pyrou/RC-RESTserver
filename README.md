@@ -7,7 +7,7 @@ RC-RESTserver is a small REST Server written in python. It is designed for Contr
 
 Submodules require wiringPi : https://projects.drogon.net/raspberry-pi/wiringpi/
 
-*Building WiringPi*
+**Building WiringPi**
 
 ```bash
 sudo apt-get install git-core
