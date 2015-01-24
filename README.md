@@ -3,10 +3,23 @@ RC-RESTserver
 
 RC-RESTserver is a small REST Server written in python. It is designed for Control RF Remote-controlled devices (power sockets / lamp / ..) using several protocols (Chacon / Otio / Blyss / X10)
 
+## Dependencies
+
+Submodules require wiringPi : https://projects.drogon.net/raspberry-pi/wiringpi/
+
+### Building WiringPi
+
+```bash
+sudo apt-get install git-core
+git clone git://git.drogon.net/wiringPi
+cd wiringPi/wiringPi
+./build
+```
+
 ## Installation 
 
 ```bash
-git clone https://github.com/pyrou/RC-RESTserver.git
+git clone --recursive https://github.com/pyrou/RC-RESTserver.git
 chmod ugo+x $(pwd)/RC-RESTserver/rcserver.py
 ln -s /etc/init.d/rcserver $(pwd)/RC-RESTserver/rcserver.py
 /etc/init.d/rcserver start
