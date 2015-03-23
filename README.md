@@ -76,12 +76,6 @@ To turn off the power outlet socket configured as group 01001, unit B ; perform 
 GET /switch/01001/2/off.json 
 ```
 
-
-```
-GET /x10/C/3/on.json 
-```
-
-
 #### Tri-states commands
 
 This endpoint will also use the [rcswitch-pi library](https://github.com/r10r/rcswitch-pi) by sending "tri-states" raw commands.
