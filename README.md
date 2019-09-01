@@ -29,6 +29,9 @@ wget https://bottlepy.org/bottle.py
 chmod ugo+x $(pwd)/RC-RESTserver/rcserver.py
 sudo ln -s $(pwd)/RC-RESTserver/rcserver.py /etc/init.d/rcserver
 /etc/init.d/rcserver start
+
+#make it boot automatically
+sudo ln -s /etc/init.d/rcserver /etc/rc3.d/S98rcserver
 ```
 
 **Building RCSwitch**
