@@ -22,22 +22,22 @@ class MyDaemon(Daemon):
         
     @bottle.route('/blyss/<key:re:[0-9A-F]{6}>/<channel:re:[0-5]>/<status:re:on|off>')
     def blyss(key,channel,status):
-        call(["sudo", "/home/pi/BlyssController/send", str(key), str(channel), ("1" if status == 'on' else "0")])
+        call(["sudo", "/home/pi/RC-RESTserver/BlyssController/send", str(key), str(channel), ("1" if status == 'on' else "0")])
         return json.dumps({'data':"ok"})
     
     @bottle.route('/x10/<device:re:[A-Pa-p]>/<unit:re:[1-16]>/<status:re:on|off>')
     def x10rf(device,unit,status):
-        call(["sudo", "/home/pi/X10RF-raspberry/send", str(device), str(unit), ("1" if status == 'on' else "0")])
+        call(["sudo", "/home/pi/RC-RESTserver/X10RF-raspberry/send", str(device), str(unit), ("1" if status == 'on' else "0")])
         return json.dumps({'data':"ok"})
 
     @bottle.route('/tristate/<state:re:[01F]{12}>')
     def tristate(state):
-        call(["sudo", "/home/pi/rcswitch-pi/tristate", str(state)])
+        call(["sudo", "/home/pi/RC-RESTserver/rcswitch-pi/tristate", str(state)])
         return json.dumps({'data':"ok"})
 
     @bottle.route('/switch/<device:re:[0-1]{5}>/<unit:re:[1-5]>/<status:re:on|off>')
     def rcswitch(device,unit,status):
-        call(["sudo", "/home/pi/rcswitch-pi/send", str(device), str(unit), ("1" if status == 'on' else "0")])
+        call(["sudo", "/home/pi/RC-RESTserver/rcswitch-pi/send", str(device), str(unit), ("1" if status == 'on' else "0")])
         return json.dumps({'data':"ok"})
     
     @bottle.error(404)
