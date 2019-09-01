@@ -26,7 +26,7 @@ cd wiringPi
 ```bash
 git clone --recursive https://github.com/pyrou/RC-RESTserver.git
 chmod ugo+x $(pwd)/RC-RESTserver/rcserver.py
-ln -s /etc/init.d/rcserver $(pwd)/RC-RESTserver/rcserver.py
+sudo ln -s $(pwd)/RC-RESTserver/rcserver.py /etc/init.d/rcserver
 /etc/init.d/rcserver start
 ```
 
